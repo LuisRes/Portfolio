@@ -1,9 +1,9 @@
 import { useEffect, useState, type ButtonHTMLAttributes } from "react";
 import {Sun} from "lucide-react";
 import {Moon} from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 
-export const ThemeToggle = (): ButtonHTMLAttributes<HTMLButtonElement>  => {
+export const ThemeToggle = () => {
     const[isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
