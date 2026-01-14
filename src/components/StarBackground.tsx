@@ -17,7 +17,7 @@ export const StarBackground = () => {
     }, []);
 
     const generateStars = () => {
-        const numStars:number = Math.floor(window.innerWidth * window.innerHeight) / 10000;
+        const numStars:number = Math.floor(window.innerWidth * window.innerHeight) / 1000;
         console.log(`Generating ${numStars} stars`);
 
         const newStars:star[] = [];
@@ -32,6 +32,7 @@ export const StarBackground = () => {
             });
         }
         setStars(newStars);
+        console.log("Stars generated", newStars);
     };
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         {stars.map(star => (
