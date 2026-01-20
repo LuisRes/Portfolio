@@ -23,8 +23,8 @@ export const StarBackground = () => {
     const [meteors, setMeteors] = useState<meteor[]>([]);
 
     useEffect(() => {
-        generateStars();
         generateMeteors();
+        generateStars();
 
         const handleResize = () => {
             generateStars();
@@ -62,9 +62,9 @@ export const StarBackground = () => {
             newMeteors.push({
                 id: i,
                 size: Math.random() * 2 + 1,
-                x: Math.random() * 100,
+                x: Math.random() * 70,
                 y: Math.random() * 20,
-                delay: Math.random() * 15,
+                delay: Math.random() * 5,
                 animationDuration: Math.random() * 3 + 3
             });
         }
@@ -72,7 +72,7 @@ export const StarBackground = () => {
     };
 
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        {stars.map(star => (
+        {stars.map((star) => (
             <div key={star.id} className="star animate-pulse-subtle" 
             style={{
                 width: `${star.size}px`,
@@ -83,7 +83,7 @@ export const StarBackground = () => {
                 animationDuration: `${star.animationDuration}s`
             }}/>
         ))}
-        {meteors.map(meteor => (
+        {meteors.map((meteor) => (
             <div key={meteor.id} className="meteor animate-meteor"
             style={{
                 width: `${meteor.size * 20}px`,
@@ -91,7 +91,7 @@ export const StarBackground = () => {
                 top: `${meteor.y}%`,
                 left: `${meteor.x}%`,
                 animationDelay: `${meteor.delay}s`,
-                animationDuration: `${meteor.animationDuration}s`
+                animationDuration: `${meteor.animationDuration}s`,
             }}/>
         ))}
     </div>)
