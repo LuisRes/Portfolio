@@ -1,4 +1,4 @@
-import { GithubIcon } from "lucide-react"
+import { ArrowRight, GithubIcon, Link } from "lucide-react"
 
 type Project = {
     id: number,
@@ -9,30 +9,30 @@ type Project = {
     link: string
 }
 
-const projectList:Project[] = [
+const projectList: Project[] = [
     {
-        id: 1, 
-        title: "Admin Dashboard", 
-        description: "Dashboard for tracking of business expenses made for local restaurant" + 
-        " using Windows Forms in .NET and Azure for database deployment",
+        id: 1,
+        title: "Admin Dashboard",
+        description: "Dashboard for tracking of business expenses made for local restaurant" +
+            " using Windows Forms in .NET and Azure for database deployment",
         image: "/projects/plcs.jpg",
         tags: ["C#, .NET, Azure"],
         link: "https://github.com/LuisRes/PlcsAdmin"
     },
     {
-        id: 2, 
-        title: "Pitch Jams", 
-        description: "Full-stack web application for creating and sharing business pitches " + 
-        "using JavaEE, Java persistance API and Javascript",
+        id: 2,
+        title: "Pitch Jams",
+        description: "Full-stack web application for creating and sharing business pitches " +
+            "using JavaEE, Java persistance API and Javascript",
         image: "/projects/pitchjams.png",
         tags: ["Java, JavaEE, Javascript"],
         link: "https://www.wearepitchjams.com/"
     },
     {
-        id: 3, 
-        title: "Compiler", 
-        description: "Compiler made for fictional programming language, capable of reading," + 
-        " scanning and parsing source files, and dealing with errors",
+        id: 3,
+        title: "Compiler",
+        description: "Compiler made for fictional programming language, capable of reading," +
+            " scanning and parsing source files, and dealing with errors",
         image: "/projects/juan.png",
         tags: ["C, CMake, Visual Studio"],
         link: "https://github.com/LuisRes/JUANSCRIPT"
@@ -46,15 +46,15 @@ export const Projects = () => {
                 Featured <span className="text-primary">Projects</span>
             </h2>
             <p className="text-center text-muted-goreground mb-12 max-w-2xl mx-auto">
-                Some of my most recent projects, featuring both web applications and 
+                Some of my most recent projects, featuring both web applications and
                 desktop applications, carefully crafted with attention to detail and performance.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gao-8">
                 {projectList.map((project, key) => (
                     <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
                         <div className="h-48 overflow-hidden">
-                            <img src={project.image} alt={project.title} 
-                            className="w-full h-full object-cover transition-transform
+                            <img src={project.image} alt={project.title}
+                                className="w-full h-full object-cover transition-transform
                             duration-500 group-hover:scale-110"/>
                         </div>
                         <div className="p-6">
@@ -73,17 +73,24 @@ export const Projects = () => {
                             </p>
                             <div className="flex justify-between items-center">
                                 <div className="flex space-x-3">
-                                    <a href={project.link} 
-                                    target="_blank"
-                                    className="text-foreground/80 hover:text-primary
+                                    <a href={project.link}
+                                        target="_blank"
+                                        className="text-foreground/80 hover:text-primary
                                     transition-colors duration-300">
-                                        <GithubIcon size={20}/>
+                                        <Link size={20} />
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="text-center mt-12">
+                <a className="cosmic-button w-fit flex items-center mx-auto gap-2"
+                    target="_blank"
+                    href="https://github.com/LuisRes">
+                    Check My Github <ArrowRight size={20} />
+                </a>
             </div>
         </div>
     </section>
