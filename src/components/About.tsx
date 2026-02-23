@@ -12,19 +12,21 @@ export const About = () => {
                 <div className="space-y-6">
                     <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
                     <p className="text-muted-foreground">
-                        Lorem Ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        With over 3 years of experience in web development, I specialize
+                        in creating responsive, accessible, and performant web
+                        applications using modern technologies.
                     </p>
                     <p className="text-muted-foreground">
-                        Lorem Ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        I'm passionate about creating efficient solutions to complex
+                        problems, constantly learning new technologies and
+                        techniques.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                         <a href="#contact" className="cosmic-button">
                             Contact Me
                         </a>
-                        <a href="xd" className="px-6 py-2 rounded-full text-primary border border-primary
+                        <a href="../public/Resume_26.pdf" download className="px-6 py-2 rounded-full text-primary border border-primary
                         hover:bg-primary/10 transition-colors duration-300">
                             Download Resume
                         </a>
@@ -52,7 +54,8 @@ export const About = () => {
                             <div className=" text-left">
                                 <h4 className="font-semibold text-lg">User Experience</h4>
                                 <p className="text-muted-foreground">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Designing intuitive user interfaces and seamless user
+                                    experiences.
                                 </p>
                             </div>
                         </div>
@@ -65,7 +68,8 @@ export const About = () => {
                             <div className=" text-left">
                                 <h4 className="font-semibold text-lg">Project Management</h4>
                                 <p className="text-muted-foreground">
-                                    Lorem Ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Leading projects from conception to completion with agile
+                                    methodologies.
                                 </p>
                             </div>
                         </div>
@@ -73,5 +77,5 @@ export const About = () => {
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 }
