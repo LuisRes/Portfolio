@@ -1,4 +1,4 @@
-import { ArrowRight, GithubIcon, Link } from "lucide-react"
+import { ArrowRight, Link } from "lucide-react"
 
 type Project = {
     id: number,
